@@ -27,5 +27,5 @@ Search the maven repository for the latest BeanIO and use in the pom file
 # Steps
 - create Borehole bean
 - create mapping file : Borehole.xml
-- Handle bad data ("some of the numeric fields have # as place holder, since it is a fixed format file)
+- Handle bad data ("some of the numeric fields have # as place holder, since it is a fixed format file), using custom type handler
 - use BeanReader 
