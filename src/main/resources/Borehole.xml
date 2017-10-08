@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<beanio xmlns="http://www.beanio.org/2012/03">
+<stream name="Boreholes" format="fixedlength">
+   <typeHandler name="badDoubleHandler" class="com.useofjava.examples.BadDoubleHandler" />
+	<!-- Put into Borehole Object -->
+	<record name="borehole" class="com.useofjava.examples.bean.Borehole">
+		<field name="apiWellNumber" length="12" trim="true"/>
+		<field name="wellName" length="6"  trim="true"/>
+		<field name="wellNameSuffix" length="8" trim="true"/>
+		<field name="operatorNumber" length="5" trim="true"/>
+		<field name="bottomFieldNameCode" length="8"  trim="true"/>
+		<field name="spudDate" length="8" type="date" format="yyyyMMdd" />
+		<field name="bottomLeaseNumber" length="10" trim="true"/>
+		<field name="rkbElevation" length="5"  type="double" typeHandler="badDoubleHandler"/>
+		<field name="bhTotalMD" length="5" trim="true" typeHandler="badDoubleHandler"/>
+		<field name="trueVerticalDepth" length="5"  trim="true" typeHandler="badDoubleHandler"/>
+		<field name="surfaceNSDistance" length="5"  trim="true" typeHandler="badDoubleHandler"/>
+		<field name="surfaceNSCode" length="1" trim="true"/>
+		<field name="surfaceEWDistance" length="5"  trim="true" typeHandler="badDoubleHandler"/>
+		<field name="surfaceEWCode" length="1" trim="true"/>
+		<field name="surfaceArea" length="2" trim="true"/>
+		<field name="surfaceBlock" length="6" trim="true"/>
+		<field name="bottomNSDistance" length="5"  trim="true" typeHandler="badDoubleHandler"/>
+		<field name="bottomNSCode" length="1" trim="true"/>
+		<field name="bottomEWDistance" length="5"  trim="true" typeHandler="badDoubleHandler"/>
+		<field name="bottomEWCode" length="1" trim="true"/>
+		<field name="bottomArea" length="2" trim="true"/>
+		<field name="bottomBlock" length="6" trim="true"/>
+		<field name="totalDepthDate" length="8" type="date" format="yyyyMMdd" />
+		<field name="statusDate" length="8" type="date" format="yyyyMMdd" />
+		<field name="typeCode" length="1" trim="true"/>
+		<field name="districtCode" length="2" trim="true"/>
+		<field name="statusCode" length="3" trim="true"/>
+		<field name="waterDepth" length="5" trim="true" typeHandler="badDoubleHandler"/>
+		<field name="surfaceLongitude" length="16" trim="true" typeHandler="badDoubleHandler"/>
+		<field name="surfaceLatitude" length="16"  trim="true" typeHandler="badDoubleHandler"/>
+		<field name="bottomLongitude" length="16"  trim="true" typeHandler="badDoubleHandler"/>
+		<field name="bottomLatitude" length="16"  trim="true" typeHandler="badDoubleHandler"/>
+		<field name="surfaceLeaseNumber" length="10" trim="true"/>
+		<field name="complexIDNum" length="7" trim="true"/>
+		<field name="structureNumber" length="2" trim="true"/>
+		<field name="updateDate" length="8" type="date" format="yyyyMMdd" />
+	</record>
+</stream>
+</beanio>
